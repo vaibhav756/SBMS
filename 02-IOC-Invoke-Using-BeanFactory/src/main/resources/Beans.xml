@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="car" class="com.inter.impl.Car"></bean>
+        <bean id="bike" class="com.inter.impl.Bike"></bean>
+        <bean id="vehicle" class="com.service.Vehicle">
+        	<constructor-arg ref="car"></constructor-arg>
+        </bean>
+        
+</beans>
