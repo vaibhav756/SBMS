@@ -5,13 +5,14 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
+import com.inter.impl.Car;
+
 public class TestingApp {
 
 	public static void main(String[] args) {
-		//ApplicationContext cont=new ClassPathXmlApplicationContext("Beans.xml");  Eager loading
+		//ApplicationContext cont=new ClassPathXmlApplicationContext("Beans.xml"); // Eager loading
 		Resource resource=new ClassPathResource("Beans.xml");
-		BeanFactory factory=new XmlBeanFactory(resource);  // BeanFactory performs lazyloading
-		
+		BeanFactory factory=new XmlBeanFactory(resource);  // BeanFactory performs lazyloading*/
 	}
 
 }

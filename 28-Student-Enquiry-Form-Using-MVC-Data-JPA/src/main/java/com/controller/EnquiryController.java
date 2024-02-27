@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.dto.EnquiryDto;
 import com.entity.Courses;
 import com.entity.Enquiry;
 import com.entity.Timing;
@@ -43,7 +43,7 @@ public class EnquiryController {
 		//dto.setTiming(list);
 		dto.setAddress("Mumbai");
 		*/
-		GetModelData(model);
+		//GetModelData(model);
 		return "index";
 	}
 	
@@ -53,11 +53,12 @@ public class EnquiryController {
 		System.out.println(dto);
 		enqrepo.save(dto);
 		
-		GetModelData(model);
+		//GetModelData(model);
 		model.addAttribute("msg","Form Data Saved...");
 		return "index";
 	}
 
+	@ModelAttribute
 	private void GetModelData(Model model) {
 		List<Courses> courses = courserepo.findAll();
 		List<Integer> course=courses.stream().map(coursez->coursez.getCourseId()).collect(Collectors.toList());

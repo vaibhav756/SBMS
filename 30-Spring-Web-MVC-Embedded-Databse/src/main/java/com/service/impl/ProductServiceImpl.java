@@ -33,11 +33,8 @@ public class ProductServiceImpl implements ProductService{
 		List<ProductDto> dtoList=new ArrayList<>();
 		List<ProductEntity> entityList = repo.findAll();
 		
-		//BeanUtils.copyProperties(entityList, dtoList);
 		ModelMapper mm=new ModelMapper();
 		dtoList=entityList.stream().map(ent->this.map(ent, new ProductDto())).collect(Collectors.toList());
-		//mm.addMappings(propertyMap<entityList,dtoList>);
-		//mm.map(entityList, dtoList);
 		return dtoList;
 		
 	}

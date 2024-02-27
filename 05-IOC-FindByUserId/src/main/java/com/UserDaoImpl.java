@@ -18,6 +18,10 @@ public class UserDaoImpl implements UserDao {
 	}
 	
 	public String findById(int id) {
+		if(getName(id)==null)
+		{
+			return "No user found with Id : "+id;
+		}
 		return getName(id);
 	}
 
