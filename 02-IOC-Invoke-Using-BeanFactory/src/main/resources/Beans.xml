@@ -6,8 +6,8 @@
         
         <bean id="car" class="com.inter.impl.Car"></bean>
         <bean id="bike" class="com.inter.impl.Bike"></bean>
-        <bean id="vehicle" class="com.service.Vehicle">
+        <!-- <bean id="vehicle" class="com.service.Vehicle">
         	<constructor-arg ref="car"></constructor-arg>
-        </bean>
+        </bean> -->
         
 </beans>
