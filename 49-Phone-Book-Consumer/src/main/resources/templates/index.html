@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+	<h3 class="pt-3 pb-3">Contact Form</h3>
+	<p th:text="${msg}" class="text-success"></p>
+	<form th:action="@{/addContact}" th:object="${contact}" method="POST">
+		<input type="hidden" th:field="*{contactId}" />
+		<table class="table table-striped table-bordered">
+			<tr>
+				<th>Enter Contact : </th>
+				<th><input type="text" th:field="*{contactName}"/></th>
+			</tr>
+			<tr>
+				<th>Enter Contact Number : </th>
+				<th><input type="text" th:field="*{contactNumber}" /></th>
+			</tr>
+			<tr>
+				<th>Enter Email : </th>
+				<th><input type="text" th:field="*{contactEmail}" /></th>
+			</tr>
+			<tr>
+				<th><input type="submit" value="Submit" class="btn btn-primary" /></th>
+				<th><a href="getAllContacts">Get All Contacts</a></th>
+			</tr>
+		</table>
+	</form>
+</div>
+
+</body>
+</html>

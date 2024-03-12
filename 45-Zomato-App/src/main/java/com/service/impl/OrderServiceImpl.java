@@ -1,8 +1,8 @@
 package com.service.impl;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
 
 import com.dto.Bill;
 import com.dto.Order;
@@ -17,18 +17,41 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public Bill bookOrder(Order ord) {
 		
-		RestTemplate rt=new RestTemplate();
+		//Get proxy implementation for WebClient(Implementation class)
+		WebClient client = WebClient.create();
+		Bill bill = client.post()
+		.uri(BOOK_ORDER)
+		.bodyValue(ord)
+		.retrieve()
+		.bodyToMono(Bill.class)
+		.block();
+		
+		
+		//Send Post request and map response to Ticekt object
+		//client.post()
+		
+		/*RestTemplate rt=new RestTemplate();
 		ResponseEntity<Bill> response = rt.postForEntity(BOOK_ORDER, ord, Bill.class);
 		Bill bill=response.getBody();
+		return bill;*/
 		return bill;
 	}
 
 	@Override
 	public Bill getOrder(Integer orderid) {
 		
-		RestTemplate rt=new RestTemplate();
+		WebClient client = WebClient.create();
+		Bill bill = client.get()
+		.uri(GET_ORDER,orderid)
+		.retrieve().
+		bodyToMono(Bill.class)
+		.block();
+		
+		
+		/*RestTemplate rt=new RestTemplate();
 		ResponseEntity<Bill> response = rt.getForEntity(GET_ORDER,Bill.class,orderid);
 		Bill bill = response.getBody();
+		return bill;*/
 		return bill;
 	}
 

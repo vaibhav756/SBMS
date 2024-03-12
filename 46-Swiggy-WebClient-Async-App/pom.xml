@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com</groupId>
-	<artifactId>45-Zomato-App</artifactId>
+	<artifactId>46-Swiggy-WebClient-Async-App</artifactId>
 	<version>1.0</version>
-	<name>45-Zomato-App</name>
-	<description>Zomato Client Application</description>
+	<name>46-Swiggy-WebClient-Async-App</name>
+	<description>Swiggy WebClient Sync and Async call Client Application</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -48,7 +48,6 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
-		
 		
 	</dependencies>
 
