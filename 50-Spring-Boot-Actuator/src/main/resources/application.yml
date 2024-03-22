@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: 50-Spring-Boot-Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+      enabled: true

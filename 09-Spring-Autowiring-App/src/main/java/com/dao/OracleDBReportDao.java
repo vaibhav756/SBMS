@@ -1,9 +1,10 @@
 package com.dao;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 //@Repository("dao") Autowiring byName
-@Repository("oraclerepo")
+@Repository()
 public class OracleDBReportDao implements ReportDao {
 
 	public void getData() {

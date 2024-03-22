@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      discovery.locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: greet-api
+        uri: lb://EUREKA-CLIENT-GREET-API
+        predicates:
+        - Path=/getmsg
+      - id: welcome-api
+        uri: lb://EUREKA-CLIENT-WELCOME-API
+        predicates:
+        - Path=/welcome
+  application:
+    name: CLOUD-API-GATEWAY
+  main:
+    banner-mode: console
+server:
+  port: 2222

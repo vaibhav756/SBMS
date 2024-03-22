@@ -3,8 +3,7 @@ package com.dao;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
-@Repository("mysqlrepo")
-@Primary
+@Repository()
 public class MySqlDBReportDao implements ReportDao {
 
 	public void getData() {
