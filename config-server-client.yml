@@ -3,3 +3,4 @@ server:
 spring:
   main:
     banner-mode: console
+msg: Welcome from GitHub
