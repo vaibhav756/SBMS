@@ -2,3 +2,5 @@ spring:
   main:
     banner-mode: console
 msg: Welcome from GitHub
+server:
+  port:8082
