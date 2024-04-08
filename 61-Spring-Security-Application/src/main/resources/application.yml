@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: 61-Spring-Security-Application
+  security:
+    user:
+      name: vaibhav
+      password: vaibhav
+server:
+    port: 8081
+    

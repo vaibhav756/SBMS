@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 62-Client-App-Basic-Auth
+server:
+    port: 8082

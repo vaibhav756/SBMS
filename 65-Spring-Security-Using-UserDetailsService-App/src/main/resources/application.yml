@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 65-Spring-Security-Using-UserDetailsService-App
+  main:
+    banner-mode: console
+server:
+  port: 8081

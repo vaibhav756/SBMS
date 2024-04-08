@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 64-Spring-Security-In-Memory-Auth-App
+  main:
+    banner-mode: console
+server:
+  port: 8081

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: 66-Spring-Security-OAuth-App
+  main:
+    banner-mode: console
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 5055f7b6006cf33ba045
+            clientSecret: 567c1e630bf043b0a1c1924554d4a06e98a6e4e9
+          google:
+            clientId : 472122188690-64rl44k8ikk54s7qg3hgmt7mko9pmlsv.apps.googleusercontent.com
+            clientSecret: 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
+           
+server:
+  port: 8081 
+  #port: 8082 for Google OAuth
