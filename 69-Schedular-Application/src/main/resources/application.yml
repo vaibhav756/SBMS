@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 69-Schedular-Application
+server:
+  port: 8081

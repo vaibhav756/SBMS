@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: 67-JWT-Security-Application
+  main:
+    banner-mode: console
+server:
+   port: 8081 

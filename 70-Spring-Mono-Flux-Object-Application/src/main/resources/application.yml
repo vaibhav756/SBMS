@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: 70-Spring-Mono-Flux-Object-Application
+server:
+  port: 8081

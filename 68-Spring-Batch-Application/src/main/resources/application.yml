@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: 68-Spring-Batch-Application
+  main:
+    banner-mode: console
+  datasource:
+    url: jdbc:mysql://localhost:3306/sbms
+    username: vaibhav
+    password: vaibhav
+    driver-class-name: com.mysql.cj.jdbc.Driver  
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: always  
+server:
+  port: 8081
