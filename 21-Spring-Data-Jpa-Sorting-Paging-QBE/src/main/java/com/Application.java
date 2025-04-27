@@ -52,9 +52,25 @@ public class Application {
 		
 		Example<Employee> example = Example.of(emp);
 		List<Employee> exampleEmps = repo.findAll(example);
-		exampleEmps.forEach(exp->System.out.println(exp));
+//		exampleEmps.forEach(exp->System.out.println(exp));
 		
 		
+		/*if(repo.insertEmployee(106, "Ravi Pal", 55000, "Male", "Linux")>0)
+			System.out.println("Employee inserted successfully.");
+		else
+			System.out.println("Employee insertion failed.");*/
+		
+		/*if(repo.updateEmployeeSalaryById(15000, 106)>0)
+			System.out.println("Employee salary updated successfully.");
+		else
+			System.out.println("Employee salary updation failed.");*/
+
+		/*if(repo.deleteEmployeeByDepartment("Linux")>0)
+			System.out.println("Employee deleted successfully.");
+		else
+			System.out.println("Employee deletion failed.");*/
+		
+		//System.out.println(repo.getEmployeeByEmployeeDepartment("Development"));
 		
 	}
 
