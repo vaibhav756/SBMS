@@ -1,9 +1,14 @@
 package com.vky.entity;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,5 +36,14 @@ public class Employee {
 	
 	@Column(name="employee_department")
 	private String empDept;
+	
+	@CreationTimestamp
+	@Column(name="crtn_time",updatable=false)
+	private LocalDateTime crtnTime;
+	
+	@UpdateTimestamp
+	@Column(name="updt_time",insertable=false)
+	private LocalDateTime updtTime;
+	
 	
 }
