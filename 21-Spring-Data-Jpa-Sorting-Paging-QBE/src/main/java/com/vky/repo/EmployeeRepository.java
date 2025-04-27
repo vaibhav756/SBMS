@@ -12,7 +12,10 @@ import com.vky.entity.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Integer>{
 
-	@Transactional
+	//Whenever we are performing non-select operation we have to handle transaction.
+	//@Transactional annotation is use for begining and commiting transaction.
+	//@Modifying annotation is use to indicate that query will modify database record.
+	@Transactional  
 	@Modifying
 	@Query(value="insert into employee(employee_id,employee_name,employee_salary,employee_gender,employee_department) values(?,?,?,?,?)",nativeQuery=true)
 	public Integer insertEmployee(Integer empId,String empName,Integer empSalary,String empGender,String empDepartment);
